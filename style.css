@@ -1,0 +1,276 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+  background-color: #333333;
+}
+
+h1, h2, h3, h4, h5, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	padding: 50px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  min-width: 2678px;
+  padding: 70px 36px 0 92px;
+}
+
+/* categories  */
+
+.categories {
+  background-color: #ffffff;
+  padding: 21px 29px 25px 30px;
+  border-radius: 10px;
+  margin-right: 58px;
+  max-height: 320px;
+}
+
+.categories h3 {
+  margin-bottom: 20px;
+}
+
+.category:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.category label {
+  margin-left: 9px;
+}
+
+.customCheckBox {
+  opacity: 0;
+}
+
+.customCheckBox+label {
+  position: relative;
+  color: #333333;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+
+.customCheckBox+label::before { /*обводка*/
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999999;
+  left: -25px;
+  border-radius: 3px;
+  background: none;
+  display: inline-block;
+}
+
+.customCheckBox:checked+label::before {
+  content: '';
+  background: url("img/customCheckbox.svg") no-repeat center;
+  border: 1px solid #CCB26E;
+}
+
+/* Choices  */
+
+.task {
+	margin-right: 58px;
+}
+
+.choices {
+	width: 176px;
+}
+
+.choices__list--dropdown .is-selected {
+	display: none;
+}
+
+.choices__list--dropdown .choices__placeholder {
+	display: none;
+}
+
+.choices[data-type*=select-one]::after {
+	border: none;
+	margin-top: 0;
+	width: 15px;
+	height: 15px;
+	background-image: url("img/down-arrow.svg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	transform: translateY(-50%);
+}
+
+.choices {
+  position: relative;
+  z-index: 1;
+}
+
+.choices.is-open[data-type*=select-one]::after {
+	margin-top: 0;
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.choices__inner {
+  border-radius: 10px;
+}
+
+.is-open .choices__list--dropdown {
+  margin-top: -10px;
+  padding-top: 15px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid #CCB26E;
+  z-index: -1;
+}
+
+
+.is-open .choices__inner {
+  border-radius: 10px;
+  border: 1px solid #CCB26E;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted:after {
+  display: none;
+}
+
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 70px;
+}
+
+/* map  */
+.map {
+  margin-right: 58px;
+}
+
+[class*="ground-pane"]{
+  filter: grayscale(1);
+}
+
+.map {
+  margin-right: 58px;
+}
+
+/* scroll  */
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
+.simplebar-scrollbar::before {
+  background-color: #CCB26E;
+}
+
+.customScroll {
+  width: 360px;
+  height: 290px;
+  padding: 20px 30px 0 30px;
+  background-color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 170%;
+  margin-right: 85px;
+}
+
+ /* form */
+
+ .customForm {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+
+}
+
+.form {
+  background-color: black;
+  padding: 30px 30px 40px 30px;
+  border-radius: 10px;
+  margin-right: 58px;
+}
+
+.form__label:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.form__button {
+  width: 192px;
+  padding: 18px 53px;
+  border-radius: 10px;
+  background-color: #FF5C00;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.form__item {
+  padding: 24px 230px 24px 20px;
+  border-radius: 10px;
+  border: 0;
+}
+
+/* tippy  */
+.chapter1,
+.chapter2 {
+  background-color: #ffffff;
+  max-width: 375px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 20px 125px 20px 29px;
+}
+
+.chapter:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.tippy {
+  fill: #BCBCBC;
+}
+
+.tippy:hover {
+  fill: #ccb26e;
+}
+
